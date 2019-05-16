@@ -20,6 +20,8 @@ class UserManager(BaseUserManager):
         user.is_superuser = True
         user.save(using=self._db)
 
+        return user
+
 
 # custom user model that supports using email instead of username
 class User(AbstractBaseUser, PermissionsMixin):
