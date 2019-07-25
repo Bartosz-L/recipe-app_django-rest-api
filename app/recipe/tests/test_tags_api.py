@@ -17,7 +17,7 @@ class PublicTagsApiTest(TestCase):
         self.client = APIClient()
 
     def test_login_required(self):
-        # test that login is required for terieveing tags
+        # test that login is required for retrieveing tags
         response = self.client.get(TAGS_URL)
 
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
